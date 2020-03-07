@@ -20,7 +20,43 @@ const state = {
             completed: false,
             dueDate: '2019/05/15',
             dueTime: '11:30'
+        },
+        'ID4' : {
+            name: 'Go to gym',
+            completed: false,
+            dueDate: '2019/05/12',
+            dueTime: '18:30'
+        },
+        'ID5' : {
+            name: 'Go to mall',
+            completed: false,
+            dueDate: '2019/05/13',
+            dueTime: '13:30'
+        },
+        'ID6' : {
+            name: 'Go to earth',
+            completed: false,
+            dueDate: '2019/05/15',
+            dueTime: '11:30'
         }
+        // 'ID7' : {
+        //     name: 'Go to cr',
+        //     completed: false,
+        //     dueDate: '2019/05/12',
+        //     dueTime: '18:30'
+        // },
+        // 'ID8' : {
+        //     name: 'Go to room',
+        //     completed: false,
+        //     dueDate: '2019/05/13',
+        //     dueTime: '13:30'
+        // },
+        // 'ID9' : {
+        //     name: 'Go to um',
+        //     completed: false,
+        //     dueDate: '2019/05/15',
+        //     dueTime: '11:30'
+        // }
     },
     search: '',
     sort: 'dueDate'

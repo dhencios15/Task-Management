@@ -1,22 +1,26 @@
 <template>
-  <div class="q-mb-lg">
-    <list_header 
-      bgColor="bg-orange-4">
-      Todo
-    </list_header>
+  <transition
+      appear
+      enter-active-class="animated zoomIn"
+      leave-active-class="animated zoomOut absolute-top">
+    <div class="q-mb-lg">
+      <list-header 
+        bgColor="bg-orange-4">
+        Task
+      </list-header>
 
-    <q-list
-      separator
-      bordered>
-      <task
-        v-for="(task, key) in tasksTodo"
-        :key="key"
-        :task="task"
-        :id="key">
-      </task>
-    </q-list>
-  </div>
-    
+      <q-list
+        separator
+        bordered>
+        <task
+          v-for="(task, key) in tasksTodo"
+          :key="key"
+          :task="task"
+          :id="key">
+        </task>
+      </q-list>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -25,7 +29,7 @@
         props: ['tasksTodo'],
         components: {
             'task': require('components/Tasks/Task').default,
-            'list_header': require('components/Tasks/Modals/Shared/ListHeader').default
+            'list-header': require('components/Tasks/Modals/Shared/ListHeader').default
         }
     }
 </script>
