@@ -65,9 +65,9 @@ export default {
           link: '/'
         },
         {
-          title: 'Settings',
-          icon: 'settings',
-          link: '/settings'
+          title: 'About',
+          icon: 'help',
+          link: '/about'
         }
       ]
     }

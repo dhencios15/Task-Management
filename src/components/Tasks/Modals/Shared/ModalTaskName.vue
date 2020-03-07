@@ -3,6 +3,7 @@
         <q-input
             outlined
             autofocus
+            v-select-all
             :value="name"
             @input="$emit('update:name', $event)"
             :rules="[val => !!val || 'Field is required']"
@@ -21,11 +22,15 @@
 </template>
 
 <script>
+    import { selectAll } from 'src/directives/directive-select-all'
     export default {
-        props: ['name']
+        props: ['name'],
+        directives: {
+            selectAll
+        }
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
