@@ -35,7 +35,7 @@ const state = {
         },
         'ID6' : {
             name: 'Go to earth',
-            completed: false,
+            completed: true,
             dueDate: '2019/05/15',
             dueTime: '11:30'
         }

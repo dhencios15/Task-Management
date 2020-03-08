@@ -5,20 +5,18 @@
         <search/>
         <sort/>
       </div>
-        <p
-          v-if="search && !Object.keys(tasksTodo).length && !Object.keys(tasksCompleted).length">No
-          Search
-          Result</p>
+        <p v-if="search && !Object.keys(tasksTodo).length && !Object.keys(tasksCompleted).length">No Search Result</p>
+
         <q-scroll-area class="q-scroll-area-tasks">
           <no-tasks
-            v-if="!Object.keys(tasksTodo).length && !search">
+            v-if="!Object.keys(tasksTodo).length && !search  && !settings.showTasksInOneList">
           </no-tasks>
 
           <task-todo 
             v-if="Object.keys(tasksTodo).length"
             :tasksTodo="tasksTodo"/>
 
-            <q-separator inset spaced/>
+            <!-- <q-separator inset spaced/> -->
           
           <task-completed
             v-if="Object.keys(tasksCompleted).length"
@@ -34,7 +32,7 @@
             dense
             class="all-pointer-events"
             color="primary"
-            size="24px"
+            size="20px"
             icon="add"
         />
         </div>
@@ -61,6 +59,7 @@ export default {
   },
   computed: {
      ...mapGetters('tasks', ['tasksTodo', 'tasksCompleted']),
+     ...mapGetters('settings', ['settings']),
      ...mapState('tasks', ['search'])
   },
   mounted() {

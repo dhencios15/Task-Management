@@ -9,8 +9,16 @@ const routes = [
         component: () => import('pages/PageTodo.vue') 
       },
       { 
-        path: '/about', 
+        path: '/settings', 
+        component: () => import('pages/PageSettings.vue') 
+      },
+      { 
+        path: '/settings/about', 
         component: () => import('pages/PageAbout.vue') 
+      },
+      { 
+        path: '/auth', 
+        component: () => import('pages/PageAuth.vue') 
       }
     ]
   }

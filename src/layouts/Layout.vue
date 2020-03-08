@@ -6,6 +6,13 @@
           Task Management
         </q-toolbar-title>
 
+        <q-btn
+          to="/auth"
+          flat
+          icon-right="account_circle"
+          label="Login"
+          class="absolute-right" />
+
       </q-toolbar>
     </q-header>
 
@@ -65,9 +72,9 @@ export default {
           link: '/'
         },
         {
-          title: 'About',
-          icon: 'help',
-          link: '/about'
+          title: 'Settings',
+          icon: 'settings',
+          link: '/settings'
         }
       ]
     }

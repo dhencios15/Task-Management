@@ -1,6 +1,14 @@
 <template>
   <div class="q-pa-md">
+    <q-btn
+        to="/settings"
+        flat
+        color="primary"
+        icon="chevron_left"
+        label="Back"
+        class="q-mb-md" />
     <q-layout view="lHh Lpr lFf" container style="height: 600px" class="shadow-2 rounded-borders">
+      
       <q-header elevated>
         <q-toolbar>
           <q-toolbar-title>
